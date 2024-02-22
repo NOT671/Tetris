@@ -1,24 +1,26 @@
 #include "utils.h"
-
-#include <chrono>
+#include "define.h"
 
 using namespace std::chrono_literals;
 
-int ut::fps()
+namespace ut
 {
-    static auto start = std::chrono::steady_clock::now();
-    static int frame_cout = 0;
-    static int fps = 0;
-
-    auto end = std::chrono::steady_clock::now();
-    frame_cout++;
-    if(end - start > 1s)
+    int fps()
     {
-        fps = frame_cout;
+        static auto start = std::chrono::steady_clock::now();
+        static int frame_cout = 0;
+        static int fps = 0;
 
-        frame_cout = 0;
-        start = end;
+        auto end = std::chrono::steady_clock::now();
+        frame_cout++;
+        if(end - start > 1s)
+        {
+            fps = frame_cout;
+
+            frame_cout = 0;
+            start = end;
+        }
+
+        return fps;
     }
-
-    return fps;
 }
