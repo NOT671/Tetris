@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(Tetris)
+
+set(CXX_STANDARD 20)
+
+aux_source_directory(. src)
+
+add_executable(Tetris ${src})
