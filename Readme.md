@@ -7,5 +7,3 @@ C++ Version
 ## Support Platform
 - Linux
 ---
-
-This is git test.
