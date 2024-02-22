@@ -1,7 +1,12 @@
 # Tetris
 
-Support Platform:Linux
+A Tetris game in terminal.
 
 C++ Version
 
-A Tetris game in terminal.
+## Support Platform
+- Linux
+---
+
+
+
